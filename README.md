@@ -1,32 +1,22 @@
-ETH Trader 
-Team members:
-Alex, Kamil, Jay
+# Fraud Alert
 
-Project Description
-Portfolio analysis of Ethereum vs Ethereum competitors
+## Team Members:
+* Alexander Portno
+* Jay Yu
+* Kamil Wojnowski
 
-Research Questions
-What are Arbitrage opportunities based on price differences between exchanges
-What is the historical performance relative to its peers
-Analysis of blockchain speed (TPS) and correlation with price
-Number and size of transactions
+## Project Description
+* Fraud Alert monitors your public key on Ethereum's mainnet and sends an SMS alert containing a visual of the all the transactions performed
 
-Dataset:
-Historical and blockchain Performance for the following:
--Ethereum
--Algorand
--Polkadot
--Cardano
--Cosmos
--Tezos
--Avax
+## Research Questions
+* How can a user receive a notification about potential fraudlent activity?
 
-Info from different exchanges using APIs for arb
+## Dataset:
+* Etherscan API
+* HVPlot for visualizations
+* Twilio for SMS feed
 
-Rough breakdown of tasks
-Alex - find arb opportunities
-Kamil - Analysis of blockchain stats like TPS and other transaction 
-Jay - historical performance relative to peers (correlation, historical volatility)
-add visualization tabs to final dashboard
-
-# dream_team_one
+## Responsibilty
+* AP - produce visual of transactions
+* JY - call Twilio
+* KW - import data using API
