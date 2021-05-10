@@ -1,32 +1,24 @@
-ETH Trader 
-Team members:
-Alex, Kamil, Jay
+# [Project Title]
 
-Project Description
-Portfolio analysis of Ethereum vs Ethereum competitors
+## Team Members:
+* Alexander Portno
+* Jay Yu
+* Kamil Wojnowski
+* Serra Battal
 
-Research Questions
-What are Arbitrage opportunities based on price differences between exchanges
-What is the historical performance relative to its peers
-Analysis of blockchain speed (TPS) and correlation with price
-Number and size of transactions
+## Project Description
+* Sample
 
-Dataset:
-Historical and blockchain Performance for the following:
--Ethereum
--Algorand
--Polkadot
--Cardano
--Cosmos
--Tezos
--Avax
+## Dataset:
+* Etherscan API
+* HVPlot for visualizations
+* Twilio for SMS feed
 
-Info from different exchanges using APIs for arb
+## Responsibilty
+* AP/SB - produce visual of transactions
+* JY - call Twilio
+* KW - import data using API
 
-Rough breakdown of tasks
-Alex - find arb opportunities
-Kamil - Analysis of blockchain stats like TPS and other transaction 
-Jay - historical performance relative to peers (correlation, historical volatility)
-add visualization tabs to final dashboard
-
-# dream_team_one
+## Notes
+* 5/9 - Plotting a network with sounds better in theory than practice (hash keys are long, graphs do not look that compelling). Proposed alternative; whale watch alerts
+* 
