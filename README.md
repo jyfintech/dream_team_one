@@ -1,4 +1,4 @@
-# [Project Title]
+# [Ether Trade Flow Analysis]
 
 ## Team Members:
 * Alexander Portno
@@ -7,24 +7,19 @@
 * Serra Battal
 
 ## Project Description
-* Sample
+* This program sends an end of day snapshot of the trading activity at the major exchanges over SMS. It monitors the value of Ether exchanged relative to price over a specific timeframe
 
 ## Dataset:
-* Etherscan API
-* HVPlot for visualizations
+* Etherscan and cryptocompare API
+* Matplotlib for 3D plot
 * Twilio for SMS feed
 
-## Responsibilty
-* AP/SB - produce visual of transactions
-* JY - call Twilio
-* KW - import data using API
-
 ## Presentation
-* What does our program do?
-* How did we use an API?
-* How did we create a plot?
-* How did we use Twilio?
+### What does our program do?
+* Analyzes the value of Ether traded relative to the price of Ether through the course of a trading timeframe
+* We gathered transaction data by public key using Etherscans API. We also used Cryptocompare's API to receive historical prices for ETH
+* Using Matplotlib, we created a 3D plot with time represented on the x-axis, ETH price on the y-axis and ETH value on the z-axis and converted it to a PNG file
+* We then used Twilio to distribute the PNG over SMS as a convenient way to review the trading activity at the end of theday
 
 ## Notes
-* 5/9 - Plotting a network with sounds better in theory than practice (hash keys are long, graphs do not look that compelling). Proposed alternative; whale watch alerts
-* 
+* Need to set conditions on the columns to filter out large variance/improve visualizations of the "core" activity
