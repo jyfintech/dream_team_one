@@ -1,4 +1,4 @@
-# [Ether Trade Flow Analysis]
+# Ether Trade Flow Analysis
 
 ## Team Members:
 * Alexander Portno
@@ -7,19 +7,24 @@
 * Serra Battal
 
 ## Project Description
-* This program sends an end of day snapshot of the trading activity at the major exchanges over SMS. It monitors the value of Ether exchanged relative to price over a specific timeframe
+* This program receives a list of transactions for a specified public key, generates a 3D plot of the trading activity, and then sends the visual over SMS
 
-## Dataset:
+## References:
 * Etherscan and cryptocompare API
 * Matplotlib for 3D plot
 * Twilio for SMS feed
 
 ## Presentation
-### What does our program do?
-* Analyzes the value of Ether traded relative to the price of Ether through the course of a trading timeframe
-* We gathered transaction data by public key using Etherscans API. We also used Cryptocompare's API to receive historical prices for ETH
-* Using Matplotlib, we created a 3D plot with time represented on the x-axis, ETH price on the y-axis and ETH value on the z-axis and converted it to a PNG file
-* We then used Twilio to distribute the PNG over SMS as a convenient way to review the trading activity at the end of theday
+### What is the API request?
+* We pull time of transaction, spot price and quantity of Ether using Etherscan and cryptocompare APIs
+* After pulling the financial data, we then convert the JSON file into a Pandas dataframe and save it as a .CSV file
+* This allows us to easily pass the datapoints into the Axes3D scatter plot method
 
-## Notes
-* Need to set conditions on the columns to filter out large variance/improve visualizations of the "core" activity
+### How is the 3D plot generated?
+* Using Axes3D scatter plot function, we pass "time" into the x-axis, "quantity of Ether" into the y-axis and "spot price" into the z-axis
+* Lighter shades of each dot represent higher spot price, while the darker shades represent lower spot price
+* The plot is then converted into a .PNG file in order to send the visual over SMS
+
+### How is Twilio's API being used?
+* The .PNG file is uploaded to a server so it can be referenced as a URL
+* Next, we send the .PNG file to a specified phone number using Twilio's REST API
